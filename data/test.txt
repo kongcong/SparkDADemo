@@ -1,0 +1,36 @@
+TensorFlowOnSpark
+
+What's TensorFlowOnSpark?
+
+TensorFlowOnSpark brings scalable deep learning to Apache Hadoop and Apache Spark clusters. By combining salient features from deep learning framework TensorFlow and big-data frameworks Apache Spark and Apache Hadoop, TensorFlowOnSpark enables distributed deep learning on a cluster of GPU and CPU servers.
+
+TensorFlowOnSpark enables distributed TensorFlow training and inference on Apache Spark clusters. It seeks to minimize the amount of code changes required to run existing TensorFlow programs on a shared grid. Its Spark-compatible API helps manage the TensorFlow cluster with the following steps:
+
+Startup - launches the Tensorflow main function on the executors, along with listeners for data/control messages.
+Data ingestion
+Readers & QueueRunners - leverages TensorFlow's Reader mechanism to read data files directly from HDFS.
+Feeding - sends Spark RDD data into the TensorFlow nodes using the feed_dict mechanism. Note that we leverage the Hadoop Input/Output Format for access to TFRecords on HDFS.
+Shutdown - shuts down the Tensorflow workers and PS nodes on the executors.
+TensorFlowOnSpark was developed by Yahoo for large-scale distributed deep learning on our Hadoop clusters in Yahoo's private cloud.
+
+Why TensorFlowOnSpark?
+
+TensorFlowOnSpark provides some important benefits (see our blog) over alternative deep learning solutions.
+
+Easily migrate all existing TensorFlow programs with <10 lines of code change;
+Support all TensorFlow functionalities: synchronous/asynchronous training, model/data parallelism, inferencing and TensorBoard;
+Server-to-server direct communication achieves faster learning when available;
+Allow datasets on HDFS and other sources pushed by Spark or pulled by TensorFlow;
+Easily integrate with your existing data processing pipelines and machine learning algorithms (ex. MLlib, CaffeOnSpark);
+Easily deployed on cloud or on-premise: CPU & GPU, Ethernet and Infiniband.
+Using TensorFlowOnSpark
+
+Please check TensorFlowOnSpark wiki site for detailed documentations such as getting started guides for YARN cluster and AWS EC2 cluster. A Conversion Guide has been provided to help you convert your TensorFlow programs.
+
+Mailing List
+
+Please join TensorFlowOnSpark user group for discussions and questions.
+
+License
+
+The use and distribution terms for this software are covered by the Apache 2.0 license. See LICENSE file for terms.

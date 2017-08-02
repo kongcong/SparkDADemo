@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact name="SparkDADemo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SparkDADemo_jar</output-path>
+    <root id="root">
+      <element id="archive" name="SparkDADemo.jar">
+        <element id="module-output" name="SparkDADemo" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/../SparkJavaDemo/libs/spark-assembly-1.6.0-hadoop2.6.0.jar" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/mahout_jar/cloud9-1.5.0.jar" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/mahout_jar/stanford-corenlp-3.4.1.jar" />
+      <element id="library" level="application" name="scala-sdk-2.10.4" />
+      <element id="file-copy" path="$PROJECT_DIR$/../SparkJavaDemo/libs/spark-examples-1.6.0-hadoop2.6.0.jar" />
+    </root>
+  </artifact>
+</component>
